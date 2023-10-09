@@ -13,7 +13,15 @@ if (isNaN(age) || isNaN(chilometri)) {
     location.reload();
 }
 
-
 let prezzoPerChilometro = chilometri * prezzoAlChilometro;
 console.log(prezzoPerChilometro);
 
+if (age < 18){
+    prezzoPerChilometro = prezzoPerChilometro - (prezzoPerChilometro * 20/100);
+    console.log('prezzoPerChilometro €', prezzoPerChilometro);
+} else if (age > 65){
+    prezzoPerChilometro = prezzoPerChilometro - (prezzoPerChilometro * 40/100);
+    console.log('prezzoPerChilometro €', prezzoPerChilometro);
+} else{
+    console.log(prezzoPerChilometro);
+}
