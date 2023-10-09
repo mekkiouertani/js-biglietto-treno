@@ -19,12 +19,13 @@ console.log(prezzoPerChilometro);
 if (age < 18){
     prezzoPerChilometro = prezzoPerChilometro - (prezzoPerChilometro * 20/100);
     console.log('prezzoPerChilometro €', prezzoPerChilometro);
-    myResult.innerHTML =  `Complimenti hai uno sconto, pagherai solo ${prezzoPerChilometro}€`;
+    myResult.innerHTML =  `Complimenti hai uno sconto, pagherai solo ${prezzoPerChilometro.toFixed(2)}€`;
 } else if (age > 65){
     prezzoPerChilometro = prezzoPerChilometro - (prezzoPerChilometro * 40/100);
     console.log('prezzoPerChilometro €', prezzoPerChilometro);
-    myResult.innerHTML =  `Complimenti hai uno sconto, pagherai solo ${prezzoPerChilometro}€`;
+    myResult.innerHTML =  `Complimenti hai uno sconto, pagherai solo ${prezzoPerChilometro.toFixed(2)}€`;
 } else{
     console.log(prezzoPerChilometro);
-    myResult.innerHTML =  `Mi spiace ma paghi tutta la cifra ${prezzoPerChilometro}€`;
+    myResult.innerHTML =  `Mi spiace ma paghi tutta la cifra ${prezzoPerChilometro.toFixed(2)}€`;
 }
+
