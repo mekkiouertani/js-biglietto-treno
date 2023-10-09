@@ -3,11 +3,17 @@ console.log(myTxt);
 let prezzoAlChilometro = 0.21;
 
 
-let chilometri = prompt("Hey, quanti chilometri vuoi percorrere?");
+let chilometri = parseInt(prompt("Hey, quanti chilometri vuoi percorrere?"));
 console.log(chilometri);
-let age = prompt('Bene! Qual è la tua età?')
+let age = parseInt(prompt('Bene! Qual è la tua età?'));
 console.log(age);
+
+if (isNaN(age) || isNaN(chilometri)) {
+    console.log('Inserisci solamente caratteri numerici!');
+    location.reload();
+}
+
 
 let prezzoPerChilometro = chilometri * prezzoAlChilometro;
 console.log(prezzoPerChilometro);
-myTxt.hinnerHTML = prezzoPerChilometro;
+
